@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom'
 
 import AuthState from './context/authentication/AuthState'
-import ItemsState from './context/items/ItemsState'
+// import ItemsState from './context/items/ItemsState'
 
 import './App.css';
 

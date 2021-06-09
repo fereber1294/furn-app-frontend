@@ -13,7 +13,7 @@ const itemsState = () => {
   }
 
   //B. Reducer configuration
-  const [state, dispatch] = useReducer(itemsReducer,initialState)
+  const [state, dispatch] = useReducer(ItemsReducer,initialState)
   
   //C. Change State functions
 
@@ -61,7 +61,7 @@ const itemsState = () => {
         payload: response.data.getSingleItem
       })
     } catch(e){
-
+      console.log(e);
     }
   }
 

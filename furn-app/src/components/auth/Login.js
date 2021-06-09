@@ -87,7 +87,6 @@ export default function Login(props) {
 
           <Link to={"sign-up"} className="redirect">
             <p>SignUp</p>
-
           </Link>
         </form>
       </div>

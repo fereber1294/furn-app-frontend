@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 export default function Landing() {
   return (
@@ -11,8 +11,12 @@ export default function Landing() {
         <div id="landing-hero">
           <h3>Lorem ipsum... ... ... ... .. ... ... ... ... ...</h3>
           <div>
-            <button>Go shopping</button>
-            <p>Sign up</p>
+            <Link to={"log-in"} className="redirect">
+              <button>Go shopping</button>
+            </Link>
+            <Link to={"sign-up"} className="redirect">
+              <p>Sign up</p>
+            </Link>
           </div>
         </div>
       </div>
