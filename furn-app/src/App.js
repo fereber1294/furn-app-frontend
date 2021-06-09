@@ -2,6 +2,8 @@
 import Landing from './components/Landing'
 import Nav from './components/Nav'
 import Dashboard from './components/items/Dashboard'
+import Login from './components/auth/Login'
+import SignUp from './components/auth/SignUp'
 
 import {
   BrowserRouter as Router,
@@ -18,6 +20,29 @@ function App() {
   return (
     <>
 
+        <AuthState>
+          <Router>
+            <Switch>
+              <Route 
+                path="/"
+                component={Landing}
+                exact
+              />
+              <Route 
+                path= "/sign-up"
+                component={SignUp}
+                exact
+              />
+              <Route 
+                path="/log-in"
+                component={Login}
+                exact
+              />
+
+              
+            </Switch>
+          </Router>
+        </AuthState>
     </>
   );
 }

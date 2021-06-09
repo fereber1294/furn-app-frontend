@@ -28,7 +28,7 @@ const AuthState = (props) => {
 
      //send the response to the reducers
      dispatch({
-       type:"SUCCESFULL REGISTER",
+       type:"REGISTRATION_SUCCESFULL",
        payload: response.data
      })
 
