@@ -19,12 +19,16 @@ export default (state, action) => {
       }
     
     case "UPDATE_ITEM":
-      return    
+      return{
+        ...state,
+        singleItem: action.payload
+      }
 
     case "DELETE_ITEM":
-      return
-
-
+      return{
+        ...state,
+        singleItem: action.payload
+      }
 
     default:
       return state

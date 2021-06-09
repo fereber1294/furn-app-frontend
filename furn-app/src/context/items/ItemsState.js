@@ -18,7 +18,7 @@ const itemsState = () => {
   //C. Change State functions
 
   //Get all items
-  const getItems = async () => {
+  const getItems = async (props) => {
 
     try{
       const response = await clientAxios.get('/api/items')
@@ -53,7 +53,7 @@ const itemsState = () => {
   //Get a selected Item
   const getSingleItem = async(id) => {
     try{
-      const response = await clientAxios.get(`'/api/items',${id}`)
+      const response = await clientAxios.get(`/api/items/${id}`)
       console.log(response);
 
       dispatch({
@@ -69,7 +69,13 @@ const itemsState = () => {
   //Update Item
   const updateItem = async(id,formData) => {
     try{
+      const response = await clientAxios.put(`/api/items/${id}`,formData)
+      console.log(response);
 
+      dispatch({
+        type:"UPDATE_ITEM",
+        payload: response.data.itemUpdated
+      })
     } catch (e){
       console.log(e);
     }
@@ -78,15 +84,33 @@ const itemsState = () => {
   //Delete Item
   const deleteItem = async(id) => {
     try{
-
+      const response = await clientAxios.delete(`/api/items/${id}`)
+      console.log(response);
     } catch (e){
       console.log(e);
+      return
     }
   }
   
-  
-  
-  return
+  return (
+    <ItemsContext.Provider
+      value={
+        {
+          items: state.items,
+          singleItem: state.singleItem,
+          getItems,
+          createItem,
+          getSingleItem,
+          updateItem,
+          deleteItem
+        }
+      }
+    >
+    
+    {props.children}
+
+    </ItemsContext.Provider>
+  )
 }
 
 export default itemsState
