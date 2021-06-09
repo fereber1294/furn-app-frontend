@@ -9,9 +9,10 @@ export default function Login(props) {
 
   //use global state from context
 
-  const authContext = useContext(AuthContext)
-  const{authenticated, logIn} = authContext
+  const ctxAuth = useContext(AuthContext)
+  const{authenticated, logIn} = ctxAuth
 
+  //manage local state from forms
   const[formData, setFormData] = useState({
     email:"",
     password:""
@@ -19,6 +20,7 @@ export default function Login(props) {
 
   const{email, password} = formData
 
+  //monitoring changes
   useEffect(() => {
     if(authenticated){
       props.history.push('/dashboard')
@@ -35,7 +37,7 @@ export default function Login(props) {
     })
   }
 
-  //Send Data to DB
+  //Send Data
   const sendData = (event) => {
     event.preventDefault()
 
@@ -79,7 +81,7 @@ export default function Login(props) {
               <input 
                 type="submit"
                 className="primary-button"
-                value="login"
+                value="Log in"
               />
           </div>
 
