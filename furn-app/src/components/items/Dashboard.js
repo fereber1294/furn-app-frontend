@@ -10,7 +10,7 @@ export default function Dashboard() {
   console.log("ctx items",ctxItems)
   const{items} = ctxItems
   
-  const authCtx = useContext(AuthContext)
+  // const authCtx = useContext(AuthContext)
   // const { logOut } = authCtx
 
   // useEffect(() => {
