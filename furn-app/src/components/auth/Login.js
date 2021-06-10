@@ -18,7 +18,7 @@ export default function Login(props) {
   const { email, password } = formData;
 
   //monitoring changes
-  useEffect((props) => {
+  useEffect(() => {
       if (authenticated) {
         props.history.push("/dashboard");
       }

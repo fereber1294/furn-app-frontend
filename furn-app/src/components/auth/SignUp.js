@@ -20,7 +20,7 @@ export default function SignUp(props) {
 
   //monitoring changes
   useEffect(
-    (props) => {
+    () => {
       if (authenticated) {
         props.history.push("/dashboard");
       }
