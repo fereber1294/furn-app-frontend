@@ -73,6 +73,7 @@ const AuthState = (props) => {
       })
     }catch (e){
       console.log(e);
+      return
     }
     verifyUser()
 
