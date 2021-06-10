@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 
 
 import ItemsContext from './../../context/items/ItemsContext'
@@ -6,7 +6,7 @@ import ItemsContext from './../../context/items/ItemsContext'
 
 export default function Dashboard() {
   const ctxItems = useContext(ItemsContext)
-  const{items, getItems} = ctxItems
+  const{items} = ctxItems
   
   // const authCtx = useContext(AuthContext)
   // const { logOut } = authCtx
@@ -20,6 +20,19 @@ export default function Dashboard() {
 
   //   getEvents()
   //   }, [])
+  
+  // const createItemClick = (event) => {
+  //   event.preventDefault()
+  //   createItem()
+  // }
+
+  // const getNewFormData = async () => {
+  //   const data = {
+  //     name:state.name,
+  //     description: state.description,
+
+  //   }
+  // }
 
   return (
     <>
@@ -43,7 +56,7 @@ export default function Dashboard() {
               )
             })
         }
-        <button>Quiero vender</button>
+        <button onClick="">Quiero vender</button>
       </div>
 
 
