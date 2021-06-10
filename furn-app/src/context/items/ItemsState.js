@@ -5,11 +5,10 @@ import ItemsReducer from './ItemsReducer'
 
 import clientAxios from './../../config/axios'
 
-const itemsState = (props) => {
+const ItemsState = (props) => {
   //A. Initial State
   const initialState = {
-    items:[],
-    singleItem
+    items:[]
   }
 
   //B. Reducer configuration
@@ -100,18 +99,18 @@ const itemsState = (props) => {
           items: state.items,
           singleItem: state.singleItem,
           getItems,
-          // createItem,
-          // getSingleItem,
-          // updateItem,
-          // deleteItem
+          createItem,
+          getSingleItem,
+          updateItem,
+          deleteItem
         }
       }
     >
-    
+
     {props.children}
 
     </ItemsContext.Provider>
   )
 }
 
-export default itemsState
+export default ItemsState

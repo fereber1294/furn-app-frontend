@@ -14,13 +14,15 @@ import {
 } from 'react-router-dom'
 
 import AuthState from './context/authentication/AuthState'
-// import ItemsState from './context/items/ItemsState'
+import ItemsState from './context/items/ItemsState'
 
 import './App.css';
+import ItemsContext from './context/items/ItemsContext'
 
 function App() {
   return (
     <>
+      <ItemsState>
 
         <AuthState>
           <Router>
@@ -53,6 +55,8 @@ function App() {
             </Switch>
           </Router>
         </AuthState>
+
+      </ItemsState>
     </>
   );
 }
