@@ -23,7 +23,7 @@ const AuthState = (props) => {
 
     try{
      //Creation of the user through post method to the backend
-     const response = await axios.post("http://localhost:4006/api/users",data) 
+     const response = await clientAxios.post("api/users",data) 
      console.log(response);
 
      //send the response to the reducers
