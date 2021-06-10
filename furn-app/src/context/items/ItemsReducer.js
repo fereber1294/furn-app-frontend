@@ -1,4 +1,4 @@
-export default ItemsReducer = (state, action) => {
+const ItemsReducer = (state, action) => {
   switch(action.type){
     case "GET_ITEMS":
       return{
@@ -35,3 +35,5 @@ export default ItemsReducer = (state, action) => {
 
   }
 }
+
+export default ItemsReducer

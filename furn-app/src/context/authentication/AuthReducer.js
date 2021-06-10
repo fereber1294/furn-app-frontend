@@ -1,4 +1,5 @@
-export default AuthReducer = (state, action) => {
+
+const AuthReducer = (state, action) => {
   switch(action.type){
       
       case "REGISTRATION_SUCCESFULL":
@@ -42,3 +43,4 @@ export default AuthReducer = (state, action) => {
           return state
   }
 }
+export default AuthReducer
