@@ -2,6 +2,8 @@
 import Landing from './components/Landing'
 import Nav from './components/Nav'
 import Dashboard from './components/items/Dashboard'
+import CreateItem from './components/items/CreateItem'
+
 import Login from './components/auth/Login'
 import SignUp from './components/auth/SignUp'
 
@@ -38,8 +40,16 @@ function App() {
                 component={Login}
                 exact
               />
-
-              
+              <Route 
+                path="/dashboard"
+                component={Dashboard}
+                exact
+              />              
+              <Route 
+                path="/dashboard/createItem"
+                component={CreateItem}
+                exact
+              />              
             </Switch>
           </Router>
         </AuthState>

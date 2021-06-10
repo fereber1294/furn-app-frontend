@@ -5,7 +5,7 @@ import ItemsReducer from './ItemsReducer'
 
 import clientAxios from './../../config/axios'
 
-const itemsState = () => {
+const itemsState = (props) => {
   //A. Initial State
   const initialState = {
     items:[],
@@ -18,7 +18,7 @@ const itemsState = () => {
   //C. Change State functions
 
   //Get all items
-  const getItems = async (props) => {
+  const getItems = async () => {
 
     try{
       const response = await clientAxios.get('/api/items')
@@ -31,6 +31,7 @@ const itemsState = () => {
 
     } catch(e){
       console.log(e);
+      return
     }
   }
 
@@ -99,10 +100,10 @@ const itemsState = () => {
           items: state.items,
           singleItem: state.singleItem,
           getItems,
-          createItem,
-          getSingleItem,
-          updateItem,
-          deleteItem
+          // createItem,
+          // getSingleItem,
+          // updateItem,
+          // deleteItem
         }
       }
     >

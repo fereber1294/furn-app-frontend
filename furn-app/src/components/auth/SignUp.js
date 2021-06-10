@@ -95,8 +95,8 @@ export default function SignUp(props) {
                     <label>Confirmar password</label>
                     <input 
                         type="password"
-                        id="confirmar"
-                        name="confirmar"
+                        id="confirm"
+                        name="confirm"
                         placeholder="Confirm your password"
                         onChange={(e) => getFormData(e)}
                         value={confirm}
