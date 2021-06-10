@@ -6,7 +6,7 @@ import AuthContext from './../../context/authentication/AuthContext'
 export default function SignUp(props) {
   //use global state from context
   const ctxAuth = useContext(AuthContext)
-  const {message, authenticated, user, registerUser} = ctxAuth
+  const {authenticated, user, registerUser} = ctxAuth
 
   //manage local state from forms
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ export default function SignUp(props) {
   const {name,email,password,confirm} = formData
 
   //monitoring changes
-  useEffect(() => {
+  useEffect((props) => {
     if(authenticated){
       props.history.push('/dashboard')
     }

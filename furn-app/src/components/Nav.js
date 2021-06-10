@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <>
       <div>
-        <img src=""/>
+        <img src="" alt="mono"/>
         <h1>app</h1>
       </div>
     </>

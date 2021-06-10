@@ -1,4 +1,4 @@
-export default (state, action) => {
+export default AuthReducer = (state, action) => {
   switch(action.type){
       
       case "REGISTRATION_SUCCESFULL":

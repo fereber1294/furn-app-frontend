@@ -1,6 +1,6 @@
 //Imports
 import Landing from './components/Landing'
-import Nav from './components/Nav'
+// import Nav from './components/Nav'
 import Dashboard from './components/items/Dashboard'
 import CreateItem from './components/items/CreateItem'
 
@@ -17,7 +17,7 @@ import AuthState from './context/authentication/AuthState'
 import ItemsState from './context/items/ItemsState'
 
 import './App.css';
-import ItemsContext from './context/items/ItemsContext'
+// import ItemsContext from './context/items/ItemsContext'
 
 function App() {
   return (

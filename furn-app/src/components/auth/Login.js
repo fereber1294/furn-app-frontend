@@ -22,7 +22,7 @@ export default function Login(props) {
   const{email, password} = formData
 
   //monitoring changes
-  useEffect(() => {
+  useEffect((props) => {
     if(authenticated){
       props.history.push('/dashboard')
     }
@@ -159,10 +159,9 @@ export default function Login(props) {
                   </div>
                   <div className="text-sm">
                   <Link to={"sign-up"} className="redirect">
-
-                    <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                    <p className="font-medium text-indigo-600 hover:text-indigo-500">
                       Crear una cuenta
-                    </a>
+                    </p>
                   </Link>
                   </div>
                 </div>
