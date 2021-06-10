@@ -23,7 +23,7 @@ const AuthState = (props) => {
 
     try{
      //Creation of the user through post method to the backend
-     const response = await clientAxios.post("api/users",data) 
+     const response = await clientAxios.post("api/users/sign-up",data) 
      console.log(response);
 
      //send the response to the reducers
@@ -66,7 +66,7 @@ const AuthState = (props) => {
 
   const logIn = async (data) => {
     try{
-      const response = await clientAxios.post("api/auth",data)
+      const response = await clientAxios.post("api/auth/log-in",data)
       dispatch({
         type: "SUCCESFUL_LOGIN",
         payload: response.data
