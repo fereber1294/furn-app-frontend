@@ -39,14 +39,7 @@ export default function Landing() {
                 />
               </div>
               <div className="mt-20">
-                <div>
-                  <a href="#" className="inline-flex space-x-4">
-
-                    <span className="inline-flex items-center text-sm font-medium text-rose-500 space-x-1">
-                      {/* <ChevronRightIcon className="h-5 w-5" aria-hidden="true" /> */}
-                    </span>
-                  </a>
-                </div>
+   
                 <div className="mt-6 sm:max-w-xl">
                   <h1 className="text-4xl font-mono font-extrabold text-gray-900 tracking-tight sm:text-5xl uppercase">
                     El nuevo marketplace para los nuevos nómadas.

@@ -8,10 +8,10 @@ export default function Dashboard() {
   console.log("hola")
   const ctxItems = useContext(ItemsContext)
   console.log("ctx items",ctxItems)
-  const{getItems,items} = ctxItems
+  const{items} = ctxItems
   
   const authCtx = useContext(AuthContext)
-  const { logOut } = authCtx
+  // const { logOut } = authCtx
 
   // useEffect(() => {
     
