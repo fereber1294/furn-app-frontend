@@ -71,10 +71,10 @@ const AuthState = (props) => {
         type: "SUCCESFUL_LOGIN",
         payload: response.data
       })
-      verifyUser()
     }catch (e){
       console.log(e);
     }
+    verifyUser()
 
   }
 
