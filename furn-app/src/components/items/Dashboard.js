@@ -11,15 +11,15 @@ export default function Dashboard() {
   // const authCtx = useContext(AuthContext)
   // const { logOut } = authCtx
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    const getEvents = async () => {
-      await getItems()
-      return
-    }
+  //   const getEvents = async () => {
+  //     await getItems()
+  //     return
+  //   }
 
-    getEvents()
-    }, [])
+  //   getEvents()
+  //   }, [])
 
   return (
     <>
