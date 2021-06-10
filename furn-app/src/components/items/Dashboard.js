@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 
 
 import ItemsContext from './../../context/items/ItemsContext'
-import AuthContext from './../../context/authentication/AuthContext'
+// import AuthContext from './../../context/authentication/AuthContext'
 
 export default function Dashboard() {
   console.log("hola")
