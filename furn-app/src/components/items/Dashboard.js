@@ -23,7 +23,7 @@ export default function Dashboard() {
     newPrice: "",
   });
 
-  const [favItems, setFavItems] = useState([]);
+  // const [favItems, setFavItems] = useState([]);
 
   useEffect(() => {
     console.log("showform state:", showForm);

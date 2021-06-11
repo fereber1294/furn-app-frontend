@@ -5,7 +5,7 @@ import AuthContext from "./../../context/authentication/AuthContext";
 
 export default function Login(props) {
   //use global state from context
-
+  const history = props.history
   const ctxAuth = useContext(AuthContext);
   const { authenticated, logIn } = ctxAuth;
 
@@ -20,7 +20,7 @@ export default function Login(props) {
   //monitoring changes
   useEffect(() => {
       if (authenticated) {
-        props.history.push("/dashboard");
+        history.push("/dashboard");
       }
       return;
     },
