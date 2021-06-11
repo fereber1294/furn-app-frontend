@@ -7,9 +7,7 @@ export default function CreateItem() {
       <div className="bg-white flex flex-center flex-col shadow px-4 py-5 sm:rounded-lg sm:p-6">
         <h1 className="text-xl font-medium leading-6 text-gray-900">Agregar artículos</h1>
       </div>
-      {/* <form action="/items/create" method="post" enctype="multipart/form-data">
-        <input type="file"></input>
-      </form> */}
+    
 
       <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
         <div className="md:grid md:grid-cols-3 md:gap-6">
