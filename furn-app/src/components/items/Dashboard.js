@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 
 
 import ItemsContext from './../../context/items/ItemsContext'
@@ -6,20 +6,17 @@ import ItemsContext from './../../context/items/ItemsContext'
 
 export default function Dashboard() {
   const ctxItems = useContext(ItemsContext)
-  const{items} = ctxItems
-  
-  // const authCtx = useContext(AuthContext)
-  // const { logOut } = authCtx
+  const{items, getItems} = ctxItems
 
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   const getEvents = async () => {
-  //     await getItems()
-  //     return
-  //   }
+    const getEvents = async () => {
+      await getItems()
+      return
+    }
 
-  //   getEvents()
-  //   }, [])
+    getEvents()
+    }, [])
   
   // const createItemClick = (event) => {
   //   event.preventDefault()
@@ -38,24 +35,7 @@ export default function Dashboard() {
     <>
       <div>
         <h1>Bienvenido al Tianguis</h1>
-        {
-          items.length === 0 ? "¡Uups! ¡Parece que todo se ha vendido!" :
-            items.map((e) => {
-              return(
-                <div key={e.id}>
-                  <div>
-                    <img src={e.imageUrl} alt="items"/>
-                  </div>
-                  <div>
-                    <h4>{e.name}</h4>
-                    <p>{e.description}</p>
-                    <p>{e.price}</p>
-                    <p>{e.dimensions}</p>
-                  </div>
-                </div>
-              )
-            })
-        }
+        
         <button onClick="">Quiero vender</button>
       </div>
 
@@ -73,7 +53,7 @@ export default function Dashboard() {
             <h3 className="mt-6 text-gray-900 text-sm font-medium">{e.name}</h3>
             <dl className="mt-1 flex-grow flex flex-col justify-between">
               <dt className="sr-only">Artículo:</dt>
-              <dd className="text-gray-500 text-sm">{e.name}</dd>
+              {/* <dd className="text-gray-500 text-sm">{e.name}</dd> */}
               <dt className="sr-only">Descripción</dt>
               <dd className="mt-3">
                 <span className="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">
@@ -84,14 +64,15 @@ export default function Dashboard() {
           </div>
           <div>
             <dl className="mt-1 flex-grow flex flex-col justify-between">
-              <dt className="sr-only">Precio:</dt>
-              <dd className="text-gray-500 text-sm">{e.price}</dd>
-              <dt className="sr-only">Piezas disponibles</dt>
+              <h3 className="text-gray-900">Precio:</h3>
+              <dd className="text-gray-700 text-sm">{e.price}</dd>
+              <h3 className="text-gray-900">Piezas disponibles</h3>
               <dd className="mt-3">
-                <span className="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">
+                <span className="px-2 text-green-800 text-xs font-medium rounded-full">
                   {e.quantity}
                 </span>
               </dd>
+              <dt className="sr-only">Descripción</dt>
             </dl>
 
           </div>

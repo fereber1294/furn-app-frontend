@@ -51,7 +51,7 @@ function App() {
                 path="/dashboard/createItem"
                 component={CreateItem}
                 exact
-              />              
+              />
             </Switch>
           </Router>
         </AuthState>
