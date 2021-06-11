@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import LogoFurn from './../logo.png'
 
 import AuthContext from "./../../context/authentication/AuthContext";
 
@@ -51,8 +52,9 @@ export default function Login(props) {
     <div className="min-h-screen bg-white flex font-mono">
       <div className="flex-1 flex flex-col justify-center py-12 shadow shadow-2xl px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full  max-w-sm lg:w-96">
-          <div>
-            
+          <div className="">
+            {/* <img src={LogoFurn} alt="logo" className="h-20 w-auto"></img> */}
+
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900 uppercase">
               Ingresa a tu cuenta
             </h2>
@@ -148,7 +150,7 @@ export default function Login(props) {
         </div>
       </div>
       <div className="hidden lg:block relative w-0 flex-1 bg-gray-100">
-        
+
       </div>
     </div>
   );

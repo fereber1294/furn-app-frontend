@@ -23,7 +23,7 @@ export default function Dashboard() {
     newPrice: "",
   });
 
-  // const [favItems, setFavItems] = useState([]);
+  const [favItems, setFavItems] = useState([]);
 
   useEffect(() => {
     console.log("showform state:", showForm);
@@ -36,19 +36,19 @@ export default function Dashboard() {
   }, []);
 
   const addToFavs = async (req,res) => {
-    // const data = {
-    //   name: req.body.name,
-    //   imageUrl: req.body.imageUrl,
-    //   price: req.body.price,
-    // };
+    const data = {
+      name: req.body.name,
+      imageUrl: req.body.imageUrl,
+      price: req.body.price,
+    };
     console.log("req",req);
-    // const response = await clientAxios.get(`/api/items/${req.body.id}`)
-    // console.log("fav item response is:",response);
+    const response = await clientAxios.get(`/api/items/${req.body.id}`)
+    console.log("fav item response is:",response);
 
-    // setFavItems({
-    //   ...favItems,
-    //   data
-    // });
+    setFavItems({
+      ...favItems,
+      data
+    });
 
 
     return (

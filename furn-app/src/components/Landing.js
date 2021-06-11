@@ -1,13 +1,12 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import LogoFurn from './../components/logo.png'
 
 const footerNavigation = {
-
   social: [
-
     {
-      name: 'GitHub',
-      href: 'https://github.com/fereber1294',
+      name: "GitHub",
+      href: "https://github.com/fereber1294",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -19,116 +18,163 @@ const footerNavigation = {
       ),
     },
   ],
-}
+};
 export default function Landing() {
   return (
     <>
-
-
       <div className="bg-white">
-      <main>
-        {/* Hero section */}
-        <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
-            <div>
+        <main>
+          {/* Hero section */}
+          <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
               <div>
-                
-              </div>
-              <div className="mt-20">
-   
-                <div className="mt-6 sm:max-w-xl">
-                  <h1 className="text-4xl font-mono font-extrabold text-gray-900 tracking-tight sm:text-5xl uppercase">
-                    El nuevo marketplace para los nuevos nómadas.
-                  </h1>
-                  <p className="mt-6 text-xl text-gray-700 font-mono ">
-                    Ya sea que estes buscando amueblar tu nuevo hogar u obtener un mejor precio por tus artículos.
-                  </p>
+                <div>
+                <img src={LogoFurn} alt="logo" className="h-20 w-auto"></img>
                 </div>
-                <form action="#" className="mt-12 sm:max-w-lg sm:w-full sm:flex">
-                  <div className="min-w-0 flex-1">
-
+                <div className="mt-15">
+                  <div className="mt-6 sm:max-w-xl">
+                    <h1 className="text-4xl font-mono font-extrabold text-gray-900 tracking-tight sm:text-5xl uppercase">
+                      El nuevo marketplace para los nuevos nómadas.
+                    </h1>
+                    <p className="mt-6 text-xl text-gray-700 font-mono ">
+                      Ya sea que estes buscando amueblar tu nuevo hogar u
+                      obtener un mejor precio por tus artículos.
+                    </p>
                   </div>
-                  <div className="mt-4 sm:mt-0 sm:ml-3">
-                  <Link 
-                    to={"log-in"}
+                  <form
+                    action="#"
+                    className="mt-12 sm:max-w-lg sm:w-full sm:flex"
                   >
-                    <button
-                      type="submit"
-                      className="block w-full  border px-5 py-3 bg-blue-300 text-base font-mono font-bold text-black border border-black shadow-offset-black hover:bg-blue-600 hover:text-white  sm:px-10 uppercase"
-                    >
-                      Ir a la colección.
-                    </button>
-
-                  </Link>
-                  <Link to={"sign-up"}>
-                    <span className="block w-full rounded bg-rose-50 px-2.5 py-1 text-xs font-mono font-semi text-gray-500 hover:text-gray-700 tracking-wide uppercase">
-                      Crear cuenta
-                    </span>
-                  </Link>
-                  </div>
-                </form>
-                <div className="mt-6">
-                  <div className="inline-flex items-center divide-x divide-gray-300">
-                    <div className="flex-shrink-0 flex pr-5">
-
+                    <div className="min-w-0 flex-1"></div>
+                    <div className="mt-4 sm:mt-0 sm:ml-3">
+                      <Link to={"log-in"}>
+                        <button
+                          type="submit"
+                          className="block w-full  border px-5 py-3 bg-blue-300 text-base font-mono font-bold text-black border border-black shadow-offset-black hover:bg-blue-600 hover:text-white  sm:px-10 uppercase"
+                        >
+                          Ir a la colección.
+                        </button>
+                      </Link>
+                      <Link to={"sign-up"}>
+                        <span className="block w-full rounded bg-rose-50 px-2.5 py-1 text-xs font-mono font-semi text-gray-500 hover:text-gray-700 tracking-wide uppercase">
+                          Crear cuenta
+                        </span>
+                      </Link>
                     </div>
-
+                  </form>
+                  <div className="mt-6">
+                    <div className="inline-flex items-center divide-x divide-gray-300">
+                      <div className="flex-shrink-0 flex pr-5"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div className="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-              <div className="hidden sm:block">
-                <div className="absolute inset-y-0 left-1/2 w-screen bg-blue-50  lg:left-80 lg:right-0 lg:w-full" />
-                <svg
-                  className="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0"
-                  width={404}
-                  height={392}
-                  fill="none"
-                  viewBox="0 0 404 392"
-                >
-                  <defs>
-                    <pattern
-                      id="837c3e70-6c3a-44e6-8854-cc48c737b659"
-                      x={0}
-                      y={0}
-                      width={20}
-                      height={20}
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <rect x={0} y={0} width={4} height={4} className="text-gray-300" fill="currentColor" />
-                    </pattern>
-                  </defs>
-                  <rect width={404} height={392} fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
-                </svg>
-              </div>
-              <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
-                
+            <div className="sm:mx-auto sm:max-w-3xl sm:px-6">
+              <div className="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <div className="hidden sm:block">
+                  <div className="absolute inset-y-0 left-1/2 w-screen bg-blue-50  lg:left-80 lg:right-0 lg:w-full" />
+                  <svg
+                    className="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0"
+                    width={404}
+                    height={392}
+                    fill="none"
+                    viewBox="0 0 404 392"
+                  >
+                    <defs>
+                      <pattern
+                        id="837c3e70-6c3a-44e6-8854-cc48c737b659"
+                        x={0}
+                        y={0}
+                        width={20}
+                        height={20}
+                        patternUnits="userSpaceOnUse"
+                      >
+                        <rect
+                          x={0}
+                          y={0}
+                          width={4}
+                          height={4}
+                          className="text-gray-300"
+                          fill="currentColor"
+                        />
+                      </pattern>
+                    </defs>
+                    <rect
+                      width={404}
+                      height={392}
+                      fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"
+                    />
+
+                  </svg>
+
+                  {/* <svg
+                    version="1.1"
+                    id="_x30_"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 201 86"
+                    style="enable-background:new 0 0 201 86;"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g id="LWPOLYLINE_1_">
+                        <g id="XMLID_1_">
+                          <g>
+                            <polygon
+                              class="st0"
+                              points="195,4.3 195,48.3 137.8,81.3 137.8,37.3 				"
+                            />
+                            <polygon
+                              class="st0"
+                              points="63,37.3 63,48.3 5.8,81.3 5.8,37.3 				"
+                            />
+                          </g>
+                          <g>
+                            <polyline
+                              class="st1"
+                              points="5.8,37.3 63,4.3 195,4.3 137.8,37.3 63,37.3 5.8,37.3 5.8,81.3 63,48.3 63,37.3 				"
+                            />
+                            <polyline
+                              class="st1"
+                              points="137.8,37.3 137.8,81.3 195,48.3 195,4.3 				"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg> */}
+                </div>
+                <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12"></div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
 
-      {/* Footer section */}
-      <footer className="mt-40 bg-blue-900 lg:mt-60">
-        <div className="mx-auto max-w-md py-5 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-
-          <div className="mt-8 flex justify-center space-x-6">
-            {footerNavigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
+        {/* Footer section */}
+        <footer className="mt-40 bg-blue-900 lg:mt-60">
+          <div className="mx-auto max-w-md py-5 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="mt-8 flex justify-center space-x-6">
+              {footerNavigation.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-400 hover:text-gray-300"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+            <p className="mt-8 text-center text-base text-gray-400">
+              &copy; by Fer Reyes
+            </p>
           </div>
-          <p className="mt-8 text-center text-base text-gray-400">&copy; by Fer Reyes</p>
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
     </>
-  )
+  );
 }
