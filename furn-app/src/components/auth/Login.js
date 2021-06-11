@@ -46,58 +46,14 @@ export default function Login(props) {
   };
 
   return (
-    // <>
-    //   <div>
-    //     <h1>Log In</h1>
+   
 
-    //     <form onSubmit={(e) => {sendData(e)}}>
-    //       <div className="login-form-field">
-    //         <label>Email</label>
-    //         <input
-    //           type="email"
-    //           id="email"
-    //           name="email"
-    //           placeholder="Please enter your registered email"
-    //           onChange={(e) => {getFormData(e)}}
-    //           value={email}
-    //         />
-    //       </div>
-    //       <div className="login-form-field">
-    //         <label>Password</label>
-    //           <input
-    //             type="password"
-    //             id="password"
-    //             name="password"
-    //             placeholder="●●●●●●"
-    //             onChange={(e) => {getFormData(e)}}
-    //             value={password}
-    //           />
-    //       </div>
-    //       <div className="login-form-field">
-    //           <input
-    //             type="submit"
-    //             className="primary-button"
-    //             value="Log in"
-    //           />
-    //       </div>
-
-    //       <Link to={"sign-up"} className="redirect">
-    //         <p>SignUp</p>
-    //       </Link>
-    //     </form>
-    //   </div>
-    // </>
-
-    <div className="min-h-screen bg-white flex">
-      <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-        <div className="mx-auto w-full max-w-sm lg:w-96">
+    <div className="min-h-screen bg-white flex font-mono">
+      <div className="flex-1 flex flex-col justify-center py-12 shadow shadow-2xl px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+        <div className="mx-auto w-full  max-w-sm lg:w-96">
           <div>
-            <img
-              className="h-12 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt="Workflow"
-            />
-            <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+            
+            <h2 className="mt-6 text-3xl font-extrabold text-gray-900 uppercase">
               Ingresa a tu cuenta
             </h2>
           </div>
@@ -181,7 +137,7 @@ export default function Login(props) {
                 <div>
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent  shadow-sm text-sm font-mono font-bold text-black bg-blue-300 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent  shadow-sm text-sm font-mono font-bold text-black bg-blue-300 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 uppercase"
                   >
                     Iniciar sesión
                   </button>
@@ -191,12 +147,8 @@ export default function Login(props) {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block relative w-0 flex-1">
-        <img
-          className="absolute inset-0 h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-          alt=""
-        />
+      <div className="hidden lg:block relative w-0 flex-1 bg-gray-100">
+        
       </div>
     </div>
   );

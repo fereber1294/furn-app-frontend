@@ -55,86 +55,18 @@ export default function SignUp(props) {
 
   return (
     <>
-      <div>
-        <h1>Create Account</h1>
-        <form
-          onSubmit={(e) => {
-            sendDataToDB(e);
-          }}
-        >
-          <div className="login-form-field">
-            <label>Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Type in your name"
-              onChange={(e) => getFormData(e)}
-              value={name}
-            />
-          </div>
-          <div className="login-form-field">
-            <label>Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Plese enter your email"
-              onChange={(e) => getFormData(e)}
-              value={email}
-            />
-          </div>
-          <div className="login-form-field">
-            <label>Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Type in a 6 character minimum password"
-              onChange={(e) => getFormData(e)}
-              value={password}
-            />
-          </div>
-          <div className="login-form-field">
-            <label>Confirmar password</label>
-            <input
-              type="password"
-              id="confirm"
-              name="confirm"
-              placeholder="Confirm your password"
-              onChange={(e) => getFormData(e)}
-              value={confirm}
-            />
-          </div>
+      
 
-          <div className="login-form-field">
-            <input type="submit" className="primary-button" value="Sign Up" />
-          </div>
-        </form>
-
-        <Link>
-          <p>Do you have an account already?</p>
-        </Link>
-
-        {user ? <p>Welcome {`${user.name}`} !</p> : null}
-
-        {/* { ctxAuth.authenticated ? "You are authenticated" : "You are not authenticated" } */}
-      </div>
-
-      <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gray-50 flex font-mono flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <img
-            className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-            alt="Workflow"
-          />
+          
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Crea tu cuenta
           </h2>
         </div>
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <div className="bg-white py-8 px-4 shadow shadow-2xl sm:px-10">
             <form
               className="space-y-6"
               onSubmit={(e) => {
@@ -156,7 +88,7 @@ export default function SignUp(props) {
                     autoComplete="email"
                     onChange={(e) => getFormData(e)}
                     value={email}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -176,7 +108,7 @@ export default function SignUp(props) {
                     autoComplete="current-password"
                     onChange={(e) => getFormData(e)}
                     value={password}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -194,7 +126,7 @@ export default function SignUp(props) {
                     name="confirm"
                     onChange={(e) => getFormData(e)}
                     value={confirm}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -206,7 +138,7 @@ export default function SignUp(props) {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent  shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Crear cuenta
                 </button>
